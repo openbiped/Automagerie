@@ -1,0 +1,59 @@
+<mujoco model="Q1 Mini scene">
+	<!-- 100 hz -->
+	<!-- <option timestep="0.01"/> -->
+	<!-- <statistic center="0 0 0.55" extent="1.1" /> -->
+	<include file="q1mini.xml" />
+	<default>
+		<!-- sliding friction, torsional friction, rolling friction -->
+		<!-- <geom friction="3.0 0.1 0.006"/> -->
+		<geom friction="1.5 0.01 0.0006"/>
+	</default>
+	<visual>
+		<headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+		<rgba haze="0.15 0.25 0.35 1" />
+        <global azimuth="150" elevation="-10" />
+    </visual>
+	  <statistic center="0 0 .3" extent="0.6"/>
+	<asset>
+		<texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+		<texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+		<material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2" />
+	</asset>
+	<worldbody>
+		<light pos="0 0 3" dir="0 0 -1" directional="false" />
+		<body name="floor">
+			<geom pos="0 0 0" name="floor" size="0 0 .125" type="plane" material="groundplane" conaffinity="1" contype="1" />
+		</body>
+		<!-- <body name="goal" pos="0.5 0.5 0.1">
+			<freejoint />
+			<geom type="box" size="0.015 0.015 0.015" rgba=".5 .7 .5 1" conaffinity="1" contype="1" />
+		</body> -->
+	</worldbody>
+
+  <keyframe>
+    <key name="home"
+      qpos="
+        0 0 0.41491
+        1 0 0 0
+
+        0.4 -0.1 -1.7 0.9 -1.12 -0.4 0.1 1.7 -0.9 1.12
+      "
+      ctrl="
+        0.4 -0.1 -1.7 0.9 -1.12 -0.4 0.1 1.7 -0.9 1.12
+      "/>
+
+    <key name="snapshot"
+      qpos="
+		    -0.01109 -0.17073 0.41491
+		    0.99663 0.04697 -0.05223 -0.04229
+
+		    0.40222 -0.10230 -1.38834 1.13267 -1.14010
+		    -0.40222 -0.10230 1.38834 -1.13267 1.14010
+		  "
+		  ctrl="
+		    0.40222 -0.10230 -1.38834 1.13267 -1.14010
+		    -0.40222 -0.10230 1.38834 -1.13267 1.14010
+      "/>
+  </keyframe>
+
+</mujoco>

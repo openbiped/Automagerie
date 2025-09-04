@@ -1,0 +1,48 @@
+{
+  "dx": 0.0,
+  "dy": 0.0,
+  "dtheta": 0.0,
+  "duration": 8,
+  "hardware": true,
+  "trunk_mode": false,
+  "double_support_ratio": 0.2,
+  "startend_double_support_ratio": 1.5,
+  "planned_timesteps": 48,
+  "walk_com_height": 0.34,
+  "walk_foot_height": 0.05,
+  "walk_trunk_pitch": -6,
+  "walk_foot_rise_ratio": 0.1,
+  "single_support_duration": 0.3,
+  "single_support_timesteps": 10,
+  "foot_length": 0.16,
+  "feet_spacing": 0.24,
+  "zmp_margin": 0.0,
+  "foot_zmp_target_x": 0.0,
+  "foot_zmp_target_y": 0.0,
+  "walk_max_dtheta": 1.0,
+  "walk_max_dy": 0.1,
+  "walk_max_dx_forward": 0.1,
+  "walk_max_dx_backward": 0.1,
+  "joint_limits": true,
+  "use_vx": true,
+  "left_foot_axises": {
+    "yz": "local"
+  },
+  "right_foot_axises": {
+    "yz": "local"
+  },
+  "joints": [
+    "left_hip_yaw",
+    "left_hip_roll",
+    "left_hip_pitch",
+    "left_knee",
+    "left_ankle",
+    "right_hip_yaw",
+    "right_hip_roll",
+    "right_hip_pitch",
+    "right_knee",
+    "right_ankle"
+  ],
+  "joint_angles": {
+  }
+}

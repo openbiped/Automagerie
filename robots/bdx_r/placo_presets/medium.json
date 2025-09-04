@@ -1,0 +1,7 @@
+{
+  "duration": 2,
+  "walk_trunk_pitch": -6,
+  "walk_max_dy": 0.1,
+  "walk_max_dx_forward": 0.1,
+  "walk_max_dx_backward": 0.1
+}

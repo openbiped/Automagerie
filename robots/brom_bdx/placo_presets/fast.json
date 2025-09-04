@@ -1,0 +1,8 @@
+{
+  "duration": 2,
+  "single_support_duration": 0.30,
+  "feet_spacing": 0.22,
+  "foot_zmp_target_y": -0.04,
+  "walk_max_dx_forward": 0.6,
+  "walk_max_dx_backward": 0.6
+}

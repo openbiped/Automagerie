@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Pirrone
+    given-names: Antoine
+  - family-names: Passault
+    given-names: Grégoire
+  - family-names: Reynisson
+    given-names: Mimir
+  - family-names: Singh
+    given-names: Mankaran
+  - name: "Automagerie Contributors"
+title: "Automagerie: A collection of simulation models for OpenDuck and motion generation"
+date-released: 2025-22-07

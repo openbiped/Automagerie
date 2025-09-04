@@ -1,0 +1,64 @@
+<mujoco model="Uki BDX scene">
+  <include file="uki_bdx.xml" />
+  <default>
+    <geom friction="1.5 0.01 0.0006"/>
+  </default>
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+    <rgba haze="0.15 0.25 0.35 1" />
+    <global azimuth="150" elevation="-10" />
+  </visual>
+  <statistic center="0 0 .3" extent="0.6"/>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2" />
+  </asset>
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" directional="false" />
+    <body name="floor">
+      <geom pos="0 0 0" name="floor" size="0 0 .125" type="plane" material="groundplane" conaffinity="1" contype="1" />
+    </body>
+  </worldbody>
+
+  <keyframe>
+    <key name="home"
+      qpos="
+        0 0 0.39
+        1 0 0 0
+
+        -0.05013 -0.05247 0.77509 -0.80940 0.14038
+
+        0.736 0.692 0.0 0.0
+
+        -0.05013 -0.05247 -0.77509 -0.80940 -0.14038
+      "
+      ctrl="
+        -0.05013 -0.05247 0.77509 -0.80940 0.14038
+
+        0.736 0.692 0.0 0.0
+
+        -0.05013 -0.05247 -0.77509 -0.80940 -0.14038
+      "/>
+
+    <key name="snapshot"
+      qpos="
+        -0.0277584 -0.0114766 0.34433
+        0.999203 0.0149187 -0.0370206 0.000185122
+
+        -0.0508666 -0.0524333 0.807296 -0.856448 0.124243
+
+        0.689949 0.717491 0.0 0.0
+
+        -0.0480838 -0.0517518 -0.807887 -0.857383 -0.124157
+      "
+      ctrl="
+        -0.05013 -0.05247 0.77509 -0.80940 0.14038
+
+        0.736 0.692 0.0 0.0
+
+        -0.05013 -0.05247 -0.77509 -0.80940 -0.14038
+      "/>
+
+  </keyframe>
+</mujoco>

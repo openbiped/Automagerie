@@ -1,0 +1,35 @@
+[project]
+name = "Automagerie"
+version = "0.3.0"
+description = "A collection of simulation models for OpenDuck"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "absl-py",
+    "dm_control",
+    "pillow",
+    "numpy",
+    "tqdm",
+    "mdutils",
+    "opencv-python",
+    "pytest",
+    "urdf2mjcf",
+    "pygame>=2.6.1",
+    "flask>=3.1.0",
+    "framesviewer>=1.0.2",
+    "matplotlib>=3.10.0",
+    "placo>=0.9.14",
+    "psutil>=7.0.0",
+    "scipy>=1.15.2",
+    "gym>=0.25.0",
+    "mujoco-scenes",
+    "urdf2mjcf"
+]
+[build-system]
+requires = ["setuptools"]
+
+[tool.setuptools.packages.find]
+exclude = ["checkpoints", "checkpoints.*"]
+
+[tool.uv.sources]
+mujoco-scenes = { git = "https://github.com/openbiped/mujoco-scenes.git", rev = "automagerie" }

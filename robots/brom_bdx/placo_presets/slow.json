@@ -1,0 +1,8 @@
+{
+  "duration": 2,
+  "walk_foot_height": 0.05,
+  "walk_trunk_pitch": -6,
+  "single_support_duration": 0.40,
+  "feet_spacing": 0.22,
+  "foot_zmp_target_y": -0.04
+}

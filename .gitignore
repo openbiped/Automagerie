@@ -1,0 +1,8 @@
+gallery.md
+uv.lock
+motion_generator/__pycache__/
+.venv/*
+*.egg-info/*
+*/__pycache__
+recordings/*/*.json
+MUJOCO_LOG.TXT

@@ -1,0 +1,13 @@
+{
+  "duration": 2,
+  "walk_com_height": 0.29,
+  "walk_foot_height": 0.03,
+  "walk_trunk_pitch": -6,
+  "single_support_duration": 0.25,
+  "feet_spacing": 0.19,
+  "foot_zmp_target_x": -0.02,
+  "walk_max_dtheta": 0.5,
+  "walk_max_dy": 0.09,
+  "walk_max_dx_forward": 0.09,
+  "walk_max_dx_backward": 0.09
+}

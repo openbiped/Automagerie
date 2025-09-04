@@ -1,0 +1,94 @@
+<mujoco model="Go BDX scene">
+	<include file="go_bdx.xml" />
+	<default>
+		<geom friction="1.5 0.01 0.0006"/>
+	</default>
+	<visual>
+		<headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0" />
+		<rgba haze="0.15 0.25 0.35 1" />
+        <global azimuth="150" elevation="-10" />
+    </visual>
+	<statistic center="0 0 .3" extent="0.6"/>
+	<asset>
+		<texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+		<texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+		<material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2" />
+	</asset>
+	<worldbody>
+		<light pos="0 0 3" dir="0 0 -1" directional="false" />
+		<body name="floor">
+			<geom pos="0 0 0" name="floor" size="0 0 .125" type="plane" material="groundplane" conaffinity="1" contype="1" />
+		</body>
+	</worldbody>
+
+    <keyframe>
+      <!-- @START:!headless@ -->
+	  <key name="home" 
+	    qpos="
+	      0 0 0.32
+	      1 0 0 0
+
+	      0 0 0 0 0
+
+	      -0.11 -0.0555 0 0
+
+	      0 0 0 0 0
+	    "
+	    ctrl="
+	      0 0 0 0 0
+
+	      -0.11 -0.0555 0 0
+
+	      0 0 0 0 0
+	    "/>
+
+	  <key name="snapshot" 
+		qpos="
+			0.0179951 -0.00568659 0.309871
+			0.998182 0.0106689 0.0593185 -0.00046212
+
+			-0.000569835 -0.0034009 0.0058096 0.087257 -0.0373116
+
+			-0.0975627 0.0940399 -0.00334044 -0.0039551
+
+			0.000213206 -0.00149755 -0.00520553 -0.0842751 0.0396572
+	    "
+	    ctrl="
+	      0 0 0 0 0
+
+	      -0.11 -0.0555 0 0
+
+	      0 0 0 0 0
+	    "/>
+	  </keyframe>
+      <!-- @END:!headless@ -->
+
+      <!-- @START:headless@
+	  <key name="home" 
+	    qpos="
+	      0 0 0.32
+	      1 0 0 0
+
+	      0 0 0 0 0
+	      0 0 0 0 0
+	    "
+	    ctrl="
+	      0 0 0 0 0
+	      0 0 0 0 0
+	    "/>
+
+	  <key name="snapshot" 
+		qpos="
+			0.0179951 -0.00568659 0.309871
+			0.998182 0.0106689 0.0593185 -0.00046212
+
+			-0.000569835 -0.0034009 0.0058096 0.087257 -0.0373116
+			0.000213206 -0.00149755 -0.00520553 -0.0842751 0.0396572
+	    "
+	    ctrl="
+	      0 0 0 0 0
+	      0 0 0 0 0
+	    "/>
+	  </keyframe>
+      @END:headless@ -->
+</mujoco>
