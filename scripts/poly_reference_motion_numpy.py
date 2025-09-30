@@ -39,7 +39,7 @@ class PolyReferenceMotion:
                 self.joints = data[name]["joints"]
                 self.period = data[name]["period"]
                 self.fps = data[name]["fps"]
-                self.frame_offsets = data[name]["frame_offsets"]
+                #self.frame_offsets = data[name]["frame_offsets"]
                 self.startend_double_support_ratio = data[name][
                     "startend_double_support_ratio"
                 ]
