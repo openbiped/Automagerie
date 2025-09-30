@@ -54,7 +54,7 @@ for i, frame in enumerate(frames):
     pose[:3, 3] = root_position
     pose[:3, :3] = root_orientation_mat
 
-    fv.pushFrame(pose, "aze")
+    fv.push_frame(pose, "aze")
 
     vels["linear_vel"].append(frame[linear_vel_slice])
     vels["angular_vel"].append(frame[angular_vel_slice])
@@ -63,8 +63,8 @@ for i, frame in enumerate(frames):
     left_toe_pos = np.array(frame[left_toe_pos_slice]) #+ np.array(root_position)
     right_toe_pos = np.array(frame[right_toe_pos_slice]) #+ np.array(root_position)
     
-    fv.pushFrame(fv_utils.make_pose(left_toe_pos, [0, 0, 0]), "left_toe")
-    fv.pushFrame(fv_utils.make_pose(right_toe_pos, [0, 0, 0]), "right_toe")
+    fv.push_frame(fv_utils.make_pose(left_toe_pos, [0, 0, 0]), "left_toe")
+    fv.push_frame(fv_utils.make_pose(right_toe_pos, [0, 0, 0]), "right_toe")
 
     time.sleep(frame_duration)
 
